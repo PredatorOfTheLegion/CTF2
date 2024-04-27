@@ -36,6 +36,7 @@
         font-size: 12px;
         white-space: nowrap;
         cursor: pointer;
+        flex: 1;
       }
 
       .line {
@@ -43,7 +44,7 @@
         background-color: white;
         height: 100%;
         position: absolute;
-        left: 135px;
+        left: 100px;
         cursor: pointer;
       }
 
@@ -51,7 +52,7 @@
         font-size: 10px;
         white-space: nowrap;
         position: absolute;
-        right: 28px;
+        right: 30px;
         cursor: pointer;
       }
     }
@@ -118,7 +119,7 @@
           display: flex;
           align-items: center;
           gap: 5px;
-          margin-left: 40px;
+          margin-left: 20px;
 
           img {
             cursor: pointer;
@@ -193,7 +194,7 @@
     justify-content: center;
     gap: 7px;
     margin-top: 10px;
-    margin-left: -40px;
+    margin-left: 0;
   }
 }
 
@@ -302,4 +303,38 @@
       background: #2a2a2a;
     }
   }
+}
+
+// for chat
+.chatSelect {
+  .findUser {
+    width: 320px;
+    height: 40px;
+    background: #232a30;
+    padding-top: 10px;
+    padding-left: 20px;
+    position: relative;
+
+    input {
+      outline: none;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+
+      &::placeholder {
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.downLine {
+  position: absolute;
+  bottom: 0px;
+  background-color: #ffffff;
+  width: 100%;
+  left: 0;
+  height: 1px;
 }

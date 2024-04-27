@@ -1,0 +1,43 @@
+// for chat
+.userItem {
+  width: 320px;
+  height: 80px;
+  background: #2b2b2b;
+  padding: 10px;
+  display: flex;
+  position: relative;
+
+  &:hover {
+    transition: 400ms;
+    background: #273c75;
+    cursor: pointer;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .userText {
+      width: 200px;
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+  .sendedAt {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: #8497a6;
+  }
+}
+
+.downLine {
+  position: absolute;
+  bottom: 0px;
+  background-color: #ffffff;
+  width: 100%;
+  left: 0;
+  height: 1px;
+}

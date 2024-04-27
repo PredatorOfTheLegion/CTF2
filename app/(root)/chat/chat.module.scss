@@ -1,0 +1,233 @@
+.wrapper {
+  width: 1030px;
+  margin-left: 10px;
+  height: 700px;
+  border-radius: 20px;
+  background: #203d5380;
+
+  img {
+    cursor: pointer;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  .header {
+    width: 1030px;
+    height: 60px;
+    background: #1e1b1b;
+    padding: 25px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .textsItem {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .infoTexts {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .iconsItem {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .blockBtn {
+        background-color: #eb4b4b;
+        color: black;
+        width: 54px;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          transition: 300ms;
+          background-color: #e05555;
+        }
+      }
+
+      //   open with state menu
+      .chatMenu {
+        width: 236px;
+        height: 74px;
+        background: #3c3c3c;
+        border-radius: 3px;
+        position: absolute;
+        right: 0;
+        top: 48px;
+        z-index: 1;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        img {
+          cursor: pointer;
+        }
+
+        svg {
+          cursor: pointer;
+        }
+
+        h2 {
+          font-size: 16px;
+          color: white;
+          cursor: pointer;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .chat {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 500px;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    // .message {
+    //   position: relative;
+    //   width: 500px;
+    //   height: 100%;
+    //   border-radius: 10px;
+    //   background-color: #2e3842;
+    //   padding: 10px;
+
+    //   //   если ты отправляешь то тгда это
+    //   &.own {
+    //     margin-left: 500px;
+    //   }
+
+    //   span {
+    //     position: absolute;
+    //     right: 10px;
+    //     bottom: 5px;
+    //     color: #8497a6;
+    //     font-size: 12px;
+    //   }
+    // }
+  }
+
+  .input {
+    width: 1030px;
+    height: 120px;
+    background-color: #090b11;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .inputBorder {
+      width: 1010px;
+      height: 90px;
+      background: #464646;
+      border-radius: 5px;
+      padding: 30px;
+      padding-left: 15px;
+      outline: none;
+      border: none;
+      padding-top: 0px;
+      color: white;
+      position: relative;
+
+      input {
+        width: 100%;
+        background: transparent;
+        outline: none;
+        border: none;
+        padding-top: 10px;
+        color: white;
+        font-size: 13px;
+
+        &::placeholder {
+          color: white;
+        }
+      }
+
+      .inputIcons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        position: absolute;
+        right: 15px;
+        bottom: 10px;
+      }
+
+      .sendBtn {
+        padding: 5px 10px;
+        background-color: #00b2ff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #68d2ff;
+        }
+      }
+
+      .addSomethingSection {
+        width: 236px;
+        height: 104px;
+        background: #3c3c3c;
+        border-radius: 3px;
+        position: absolute;
+        right: 31px;
+        top: -115px;
+        z-index: 1;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        img {
+          cursor: pointer;
+        }
+
+        svg {
+          cursor: pointer;
+        }
+
+        h2 {
+          font-size: 16px;
+          color: white;
+          cursor: pointer;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

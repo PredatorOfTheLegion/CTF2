@@ -1,8 +1,8 @@
-import React from 'react';
-import './profile.module.scss';
+import React from "react";
+import "./profile.module.scss";
 
 const ProfileBadge = () => {
-  return <div></div>;
+  return <div>Profile</div>;
 };
 
 export default ProfileBadge;

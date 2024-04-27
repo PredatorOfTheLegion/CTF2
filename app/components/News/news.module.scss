@@ -1,14 +1,18 @@
-.carousel {
+.outerWrapper {
   color: white;
   background-color: rgba(40, 46, 51, 0.5);
-  border: 1px solid rgba(0, 0, 0, 1);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
-  display: flex;
   overflow: hidden;
+  grid-column: 2 / 3;
+  margin-right: 35px;
+}
+
+.innerWrapper {
   width: 100%;
-  margin-left: -86px;
-  z-index: 1;
+  height: 100%;
   position: relative;
+  display: flex;
 }
 
 .smoke {

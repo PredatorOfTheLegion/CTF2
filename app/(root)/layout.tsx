@@ -1,12 +1,14 @@
-import { ReactNode } from 'react';
-import Image from 'next/image';
-import styles from './layout.module.scss';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
-import News from '@/components/News';
+import { ReactNode } from "react";
+import Image from "next/image";
+import styles from "./layout.module.scss";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
+import News from "@/components/News";
 
-import backgroundImage from '@/main-bg.png';
+import backgroundImage from "@/main-bg.png";
+
+// import { StyleProvider } from '@ant-design/cssinjs';
 
 const HomeLayout = ({ children }: { children: ReactNode }) => {
   return (
@@ -22,6 +24,7 @@ const HomeLayout = ({ children }: { children: ReactNode }) => {
           objectFit="cover"
         />
       </div>
+      {/* <div className={styles.center}> */}
       <div className={styles.wrapper}>
         <Header />
 

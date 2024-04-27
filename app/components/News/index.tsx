@@ -105,82 +105,84 @@ const News = React.memo(() => {
   }, []);
 
   return (
-    <div className={styles.carousel} ref={handleRef}>
-      <div className={styles.smoke} />
-      <div className={clsx(styles.smoke, styles.smoke_delayed)} />
-      <div
-        ref={innerCarouselContainerRef}
-        className={clsx(
-          styles.innerCarouselContainer,
-          !containerWidth && styles.innerCarouselContainer_loading
-        )}
-        style={{
-          width: `calc(${data.length * 100}%)`,
-        }}>
-        {!containerWidth ? (
-          <div className={styles.loader} />
-        ) : (
-          data.map(({ imageUrl, title, description, hashTags }, index) => (
-            <div
-              className={styles.slide}
-              key={`slide-${index}`}
-              style={{
-                width: containerWidth * 0.9,
-              }}>
-              {index === currentSlide && (
-                <Image
-                  src={LeftArrow}
-                  alt="left-arrow"
-                  className={styles.slideControl}
-                  width={20}
-                  height={24}
-                  onClick={handleNavigateSlides(false)}
-                />
-              )}
+    <div className={styles.outerWrapper} ref={handleRef}>
+      <div className={styles.innerWrapper}>
+        <div className={styles.smoke} />
+        <div className={clsx(styles.smoke, styles.smoke_delayed)} />
+        <div
+          ref={innerCarouselContainerRef}
+          className={clsx(
+            styles.innerCarouselContainer,
+            !containerWidth && styles.innerCarouselContainer_loading
+          )}
+          style={{
+            width: `calc(${data.length * 100}%)`,
+          }}>
+          {!containerWidth ? (
+            <div className={styles.loader} />
+          ) : (
+            data.map(({ imageUrl, title, description, hashTags }, index) => (
               <div
-                className={clsx(
-                  styles.image,
-                  styles.commonBorderStyles,
-                  styles.borderImage
-                )}
+                className={styles.slide}
+                key={`slide-${index}`}
                 style={{
-                  backgroundImage: `url(${imageUrl})`,
-                }}
-              />
-              <div
-                className={clsx(
-                  styles.carouselContent,
-                  styles.commonBorderStyles,
-                  styles.borderText
-                )}>
-                <div className={clsx(styles.text, styles.title)}>
-                  {title}
-                  {hashTags.map((hashTag, index) => (
-                    <span key={hashTag + index} className={styles.chip}>
-                      #{hashTag}
-                    </span>
-                  ))}
-                </div>
-                <div className={clsx(styles.text, styles.description)}>
-                  {description}
-                </div>
-              </div>
-              {index === currentSlide && (
-                <Image
-                  src={LeftArrow}
-                  alt="left-arrow"
+                  width: containerWidth * 0.9,
+                }}>
+                {index === currentSlide && (
+                  <Image
+                    src={LeftArrow}
+                    alt="left-arrow"
+                    className={styles.slideControl}
+                    width={20}
+                    height={24}
+                    onClick={handleNavigateSlides(false)}
+                  />
+                )}
+                <div
                   className={clsx(
-                    styles.slideControl,
-                    styles.slideControl_reversed
+                    styles.image,
+                    styles.commonBorderStyles,
+                    styles.borderImage
                   )}
-                  width={20}
-                  height={24}
-                  onClick={handleNavigateSlides(true)}
+                  style={{
+                    backgroundImage: `url(${imageUrl})`,
+                  }}
                 />
-              )}
-            </div>
-          ))
-        )}
+                <div
+                  className={clsx(
+                    styles.carouselContent,
+                    styles.commonBorderStyles,
+                    styles.borderText
+                  )}>
+                  <div className={clsx(styles.text, styles.title)}>
+                    {title}
+                    {hashTags.map((hashTag, index) => (
+                      <span key={hashTag + index} className={styles.chip}>
+                        #{hashTag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className={clsx(styles.text, styles.description)}>
+                    {description}
+                  </div>
+                </div>
+                {index === currentSlide && (
+                  <Image
+                    src={LeftArrow}
+                    alt="left-arrow"
+                    className={clsx(
+                      styles.slideControl,
+                      styles.slideControl_reversed
+                    )}
+                    width={20}
+                    height={24}
+                    onClick={handleNavigateSlides(true)}
+                  />
+                )}
+              </div>
+            ))
+          )}
+        </div>
       </div>
     </div>
   );

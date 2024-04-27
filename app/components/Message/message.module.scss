@@ -1,0 +1,21 @@
+.message {
+  position: relative;
+  width: 500px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #2e3842;
+  padding: 10px;
+
+  //   если ты отправляешь то тгда это
+  &.own {
+    margin-left: 500px;
+  }
+
+  span {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: #8497a6;
+    font-size: 12px;
+  }
+}
